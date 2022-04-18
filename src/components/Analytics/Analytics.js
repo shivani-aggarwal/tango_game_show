@@ -32,15 +32,15 @@ class Analytics extends React.Component {
       }
       let data = [
           {
-              title: "Number of Prizes Won: ",
+              title: "Number of Prizes Won by Contestants: ",
               value: numOfPrizesWon,
-              percentage: (numOfPrizesWon/total)*100,
+              percentage: Math.round((numOfPrizesWon/total)*100),
               color: "green"
           },
           {
-              title: "Number of Prizes Lost: ",
+              title: "Number of Prizes Lost by Contestants: ",
               value: total - numOfPrizesWon,
-              percentage: ((total - numOfPrizesWon)/total)*100,
+              percentage: Math.round(((total - numOfPrizesWon)/total)*100),
               color: 'red'
           }
       ]
